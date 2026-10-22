@@ -1,7 +1,28 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Francoskrs</title>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>Francoskrs · Criação de sites em Campo Grande, MS</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Francoskrs: landing pages e lojas virtuais com design e movimento de verdade. Guilherme Lima Franco, Campo Grande, MS.">
+<meta name="description" content="Criação de landing pages, lojas virtuais e sites em Campo Grande, MS, para barbearias, estúdios, clínicas e restaurantes. Design, código e animação por Guilherme Lima Franco.">
+<!-- Endereço público: troque https://francoskrs-dev.netlify.app/ em todas as linhas abaixo quando tiver domínio próprio -->
+<link rel="canonical" href="https://francoskrs-dev.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Francoskrs">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://francoskrs-dev.netlify.app/">
+<meta property="og:title" content="Francoskrs · Do clique ao cliente">
+<meta property="og:description" content="Landing pages e lojas virtuais para barbearias, estúdios, clínicas e restaurantes. Guilherme Lima Franco, Campo Grande, MS.">
+<meta property="og:image" content="https://francoskrs-dev.netlify.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Francoskrs: Do clique ao cliente">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0E1020">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Francoskrs","description":"Criação de landing pages, lojas virtuais e sites para negócios locais.","url":"https://francoskrs-dev.netlify.app/","image":"https://francoskrs-dev.netlify.app/img/og.jpg","email":"francoskrs.dev@gmail.com","telephone":"+55 67 99244-9212","founder":{"@type":"Person","name":"Guilherme Lima Franco"},"address":{"@type":"PostalAddress","addressLocality":"Campo Grande","addressRegion":"MS","addressCountry":"BR"},"areaServed":"BR","priceRange":"Sob consulta","sameAs":["https://instagram.com/francoskrs_","https://github.com/francoxkrs"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400..700&family=Martian+Mono:wght@400..600&display=swap">
@@ -123,6 +144,10 @@ html.menu-open .menu-btn .ico i:last-child { transform: translateY(-2.75px) rota
 @media (min-width: 1180px) { .hud { display: inline; } }
 .kbd { display: inline-flex; align-items: center; height: 42px; padding: 0 14px; border-radius: 99px; border: 1px solid color-mix(in srgb, currentColor 35%, transparent); font-family: var(--mono); font-size: 11px; letter-spacing: .04em; white-space: nowrap; }
 .kbd:hover { border-color: currentColor; }
+.lang { display: inline-flex; align-items: center; gap: 6px; height: 42px; padding: 0 6px; font-family: var(--mono); font-size: 11px; letter-spacing: .05em; }
+.lang button { padding: 6px 2px; opacity: .45; transition: opacity .3s ease; }
+.lang button:hover, .lang button[aria-pressed="true"] { opacity: 1; }
+.lang span { opacity: .35; }
 @media (max-width: 860px) { .kbd { display: none; } }
 @media (max-width: 400px) { .logo-word { display: none; } }
 
@@ -181,6 +206,33 @@ html.no-gl .gl-fallback { display: block; }
 .portrait svg { position: absolute; left: 50%; top: 50%; width: 48%; height: auto; transform: translate(-50%, -50%); color: #fff; --px: var(--ink); }
 .portrait .mono { position: absolute; left: 16px; bottom: 14px; color: #fff; opacity: .85; }
 .portrait-inner { position: absolute; inset: -12% 0; }
+.portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.portrait .p-alt { clip-path: circle(0% at var(--mx, 50%) var(--my, 50%)); transition: clip-path .9s var(--ease); }
+.portrait:hover .p-alt, .portrait.on .p-alt { clip-path: circle(150% at var(--mx, 50%) var(--my, 50%)); }
+.portrait .p-cap { z-index: 2; }
+.about-pic { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; align-items: end; }
+.about-pic img { width: 120px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; display: block; }
+.about-pic figcaption { color: var(--tx-mute); }
+
+/* Case em destaque */
+.case { margin-top: clamp(64px, 9vw, 140px); display: grid; gap: clamp(28px, 4vw, 56px); }
+.case-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+.case-head h3 { font-family: var(--display); font-weight: 800; font-stretch: 125%; font-size: clamp(2.6rem, 8vw, 8rem); line-height: .9; letter-spacing: -.04em; }
+.case-head h3 em { font-style: normal; color: #FF5FA8; }
+.case-stage { position: relative; border-radius: 20px; overflow: hidden; background: radial-gradient(120% 90% at 20% 10%, #E7C3FB 0%, #B79CF5 35%, #2A1F3D 75%, #0C0A0F 100%); padding: clamp(20px, 5vw, 72px) clamp(16px, 6vw, 96px) 0; min-height: 0; }
+.case-browser { position: relative; border-radius: 12px 12px 0 0; overflow: hidden; background: #0C0A0F; box-shadow: 0 40px 80px -30px rgba(0,0,0,.6); }
+.case-browser .pv-bar { color: #F7EEFC; height: 34px; }
+.case-browser img { display: block; width: 100%; height: auto; }
+.case-phone { position: absolute; right: clamp(12px, 4vw, 56px); bottom: clamp(-120px, -6vw, -40px); width: clamp(110px, 17vw, 240px); border-radius: 28px; overflow: hidden; border: 6px solid #0C0A0F; box-shadow: 0 30px 60px -20px rgba(0,0,0,.7); background: #0C0A0F; }
+.case-phone img { display: block; width: 100%; height: auto; }
+.case-info { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; border-top: 1px solid var(--ln); padding-top: 22px; }
+.case-info dt { color: var(--tx-mute); margin-bottom: 8px; }
+.case-info dd { font-weight: 500; }
+.case-info a { text-decoration: underline; text-underline-offset: 4px; }
+.case-info a:hover { color: var(--blue-l); }
+@media (max-width: 760px) { .case-info { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.case-strip { display: grid; grid-template-columns: minmax(0, 1fr); }
+.case-strip img { width: 100%; height: auto; border-radius: 14px; display: block; }
 .facts { display: grid; border-top: 1px solid var(--ln); }
 .facts div { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--ln); }
 .facts dt { color: var(--tx-mute); }
@@ -382,6 +434,9 @@ html.no-gl .gl-fallback { display: block; }
 .pal-list .empty { color: var(--mute); cursor: default; }
 .pal-foot { display: flex; gap: 18px; padding: 10px 18px; border-top: 1px solid rgba(236, 238, 245, .1); color: var(--mute); font-size: 10px; }
 </style>
+</head>
+<body>
+
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="fk-word" viewBox="0 -736 6618 748"><path fill="currentColor" d="M122.54345703125 0.0V-402.06591796875H10.7392578125V-527.54345703125H122.54345703125V-556.15283203125Q122.54345703125 -618.02197265625 147.249755859375 -657.78271484375Q171.9560546875 -697.54345703125 217.564453125 -716.815185546875Q263.1728515625 -736.0869140625 324.5205078125 -736.0869140625Q346.15087890625 -736.0869140625 371.726806640625 -733.815185546875Q397.302734375 -731.54345703125 421.922119140625 -727.771728515625Q446.54150390625 -724.0 465.80224609375 -718.54345703125V-610.609375H399.97607421875Q347.45458984375 -610.609375 327.36767578125 -598.424560546875Q307.28076171875 -586.23974609375 307.28076171875 -555.783203125V-527.54345703125H465.80224609375V-402.06591796875H307.28076171875V0.0ZM517.02197265625 0.0V-527.54345703125H666.607421875L679.32470703125 -438.34765625H687.8681640625Q703.2158203125 -470.15185546875 727.4765625 -493.06494140625Q751.7373046875 -515.97802734375 782.965576171875 -528.032470703125Q814.19384765625 -540.0869140625 849.302734375 -540.0869140625Q869.4765625 -540.0869140625 887.52001953125 -537.315185546875Q905.5634765625 -534.54345703125 921.7373046875 -528.45654296875V-383.0009765625H834.259765625Q799.15087890625 -383.0009765625 774.096435546875 -371.6748046875Q749.0419921875 -360.3486328125 733.12890625 -340.881103515625Q717.2158203125 -321.41357421875 709.487548828125 -296.630859375Q701.75927734375 -271.84814453125 701.75927734375 -243.93505859375V0.0ZM1172.0 12Q1122.826171875 12.0 1080.424072265625 4.771728515625Q1038.02197265625 -2.45654296875 1006.43505859375 -19.95654296875Q974.84814453125 -37.45654296875 957.3046875 -67.728271484375Q939.76123046875 -98.0 939.76123046875 -144.63037109375Q939.76123046875 -208.0869140625 973.946044921875 -244.358642578125Q1008.130859375 -280.63037109375 1071.0439453125 -297.445556640625Q1133.95703125 -314.2607421875 1219.45703125 -318.80419921875Q1304.95703125 -323.34765625 1407.67431640625 -323.34765625V-339.36962890625Q1407.67431640625 -369.5654296875 1392.532958984375 -387.663330078125Q1377.3916015625 -405.76123046875 1347.78271484375 -413.7177734375Q1318.173828125 -421.67431640625 1273.58642578125 -421.67431640625Q1241.62939453125 -421.67431640625 1211.97705078125 -417.032958984375Q1182.32470703125 -412.3916015625 1163.32470703125 -401.750244140625Q1144.32470703125 -391.10888671875 1144.32470703125 -372.5654296875V-364.9130859375H957.41357421875Q956.41357421875 -368.9130859375 956.185302734375 -372.097900390625Q955.95703125 -375.28271484375 955.95703125 -379.7392578125Q955.95703125 -426.7392578125 992.946044921875 -462.826171875Q1029.93505859375 -498.9130859375 1102.9130859375 -519.228271484375Q1175.89111328125 -539.54345703125 1283.49951171875 -539.54345703125Q1383.02099609375 -539.54345703125 1451.95556640625 -522.271728515625Q1520.89013671875 -505.0 1556.65087890625 -466.54345703125Q1592.41162109375 -428.0869140625 1592.41162109375 -363.173828125V-152.4775390625Q1592.41162109375 -135.10791015625 1600.183349609375 -124.292724609375Q1607.955078125 -113.4775390625 1625.32470703125 -113.4775390625H1678.49853515625V-6.63037109375Q1664.15087890625 -1.0 1633.30322265625 5.5Q1602.45556640625 12.0 1567.19482421875 12.0Q1517.76025390625 12.0 1488.097412109375 1.815185546875Q1458.4345703125 -8.36962890625 1443.858642578125 -25.7392578125Q1429.28271484375 -43.10888671875 1423.10888671875 -63.93505859375H1415.10888671875Q1386.5654296875 -40.65234375 1349.467529296875 -23.28271484375Q1312.36962890625 -5.9130859375 1268.0 3.04345703125Q1223.63037109375 12.0 1172.0 12ZM1223.93408203125 -105.32568359375Q1246.6953125 -105.32568359375 1277.489013671875 -110.423583984375Q1308.28271484375 -115.521484375 1338.293701171875 -126.575927734375Q1368.3046875 -137.63037109375 1387.989501953125 -155.141357421875Q1407.67431640625 -172.65234375 1407.67431640625 -198.02197265625V-228.28271484375Q1309.2607421875 -228.28271484375 1246.08642578125 -220.2392578125Q1182.912109375 -212.19580078125 1152.89013671875 -195.826171875Q1122.8681640625 -179.45654296875 1122.8681640625 -152.97802734375Q1122.8681640625 -132.6083984375 1137.65087890625 -122.423583984375Q1152.43359375 -112.23876953125 1175.857666015625 -108.7822265625Q1199.28173828125 -105.32568359375 1223.93408203125 -105.32568359375ZM1713.02197265625 0.0V-527.54345703125H1862.607421875L1875.32470703125 -439.71728515625H1884.32470703125Q1912.23779296875 -476.54345703125 1948.966064453125 -498.271728515625Q1985.6943359375 -520.0 2027.1943359375 -529.771728515625Q2068.6943359375 -539.54345703125 2109.8681640625 -539.54345703125Q2186.58544921875 -539.54345703125 2237.7158203125 -515.184814453125Q2288.84619140625 -490.826171875 2314.661376953125 -441.65234375Q2340.4765625 -392.478515625 2340.4765625 -318.3916015625V0.0H2155.7392578125V-292.76123046875Q2155.7392578125 -319.6962890625 2148.141357421875 -340.47900390625Q2140.54345703125 -361.26171875 2126.032470703125 -374.71826171875Q2111.521484375 -388.1748046875 2090.2822265625 -394.989990234375Q2069.04296875 -401.80517578125 2041.216796875 -401.80517578125Q2001.564453125 -401.80517578125 1969.04248046875 -385.707275390625Q1936.5205078125 -369.609375 1917.139892578125 -341.141845703125Q1897.75927734375 -312.67431640625 1897.75927734375 -275.10888671875V0.0ZM2765.564453125 12.0Q2659.76025390625 12.0 2581.553955078125 -18.5Q2503.34765625 -49.0 2460.45654296875 -110.228271484375Q2417.5654296875 -171.45654296875 2417.5654296875 -264.0Q2417.5654296875 -356.54345703125 2460.45654296875 -417.815185546875Q2503.34765625 -479.0869140625 2581.553955078125 -509.315185546875Q2659.76025390625 -539.54345703125 2765.564453125 -539.54345703125Q2834.54248046875 -539.54345703125 2894.97705078125 -525.771728515625Q2955.41162109375 -512.0 3001.531005859375 -483.95654296875Q3047.650390625 -455.9130859375 3073.36767578125 -414.326171875Q3099.0849609375 -372.7392578125 3099.0849609375 -317.65234375H2912.2607421875Q2912.2607421875 -347.130859375 2892.749755859375 -368.91357421875Q2873.23876953125 -390.6962890625 2840.314697265625 -402.381103515625Q2807.390625 -414.06591796875 2765.564453125 -414.06591796875Q2713.36865234375 -414.06591796875 2678.30322265625 -396.609375Q2643.23779296875 -379.15283203125 2625.813720703125 -347.685302734375Q2608.3896484375 -316.2177734375 2608.3896484375 -274.0V-254.0Q2608.3896484375 -212.23876953125 2626.313720703125 -180.54296875Q2644.23779296875 -148.84716796875 2680.8466796875 -131.162353515625Q2717.45556640625 -113.4775390625 2772.73828125 -113.4775390625Q2814.10791015625 -113.4775390625 2847.3037109375 -126.43408203125Q2880.49951171875 -139.390625 2899.967041015625 -161.67333984375Q2919.4345703125 -183.9560546875 2919.4345703125 -210.89111328125H3099.0849609375Q3099.0849609375 -154.2607421875 3073.139404296875 -112.173828125Q3047.19384765625 -70.0869140625 3001.574462890625 -42.54345703125Q2955.955078125 -15.0 2895.248779296875 -1.5Q2834.54248046875 12.0 2765.564453125 12.0ZM3504.390625 12.0Q3399.04296875 12.0 3320.836669921875 -18.728271484375Q3242.63037109375 -49.45654296875 3199.510986328125 -110.684814453125Q3156.3916015625 -171.9130859375 3156.3916015625 -264.0Q3156.3916015625 -356.54345703125 3199.510986328125 -417.815185546875Q3242.63037109375 -479.0869140625 3320.836669921875 -509.315185546875Q3399.04296875 -539.54345703125 3504.390625 -539.54345703125Q3609.73828125 -539.54345703125 3687.944580078125 -509.315185546875Q3766.15087890625 -479.0869140625 3809.270263671875 -417.815185546875Q3852.3896484375 -356.54345703125 3852.3896484375 -264.0Q3852.3896484375 -171.9130859375 3809.270263671875 -110.684814453125Q3766.15087890625 -49.45654296875 3687.944580078125 -18.728271484375Q3609.73828125 12.0 3504.390625 12.0ZM3504.390625 -113.4775390625Q3556.58642578125 -113.4775390625 3591.65185546875 -131.162353515625Q3626.71728515625 -148.84716796875 3644.141357421875 -180.54296875Q3661.5654296875 -212.23876953125 3661.5654296875 -254.0V-274.0Q3661.5654296875 -316.2177734375 3644.141357421875 -347.685302734375Q3626.71728515625 -379.15283203125 3591.65185546875 -396.609375Q3556.58642578125 -414.06591796875 3504.390625 -414.06591796875Q3452.19482421875 -414.06591796875 3417.12939453125 -396.609375Q3382.06396484375 -379.15283203125 3364.639892578125 -347.685302734375Q3347.2158203125 -316.2177734375 3347.2158203125 -274.0V-254.0Q3347.2158203125 -212.23876953125 3364.639892578125 -180.54296875Q3382.06396484375 -148.84716796875 3417.12939453125 -131.162353515625Q3452.19482421875 -113.4775390625 3504.390625 -113.4775390625ZM4218.28173828125 12.0Q4159.19482421875 12.0 4102.662353515625 2.5Q4046.1298828125 -7.0 4000.73876953125 -26.271728515625Q3955.34765625 -45.54345703125 3928.315185546875 -76.5869140625Q3901.28271484375 -107.63037109375 3901.28271484375 -151.2607421875Q3901.28271484375 -155.173828125 3901.510986328125 -158.902099609375Q3901.7392578125 -162.63037109375 3902.7392578125 -166.63037109375H4092.650390625Q4092.10693359375 -164.0 4091.878662109375 -161.271728515625Q4091.650390625 -158.54345703125 4091.650390625 -156.54345703125Q4092.19384765625 -135.89111328125 4109.8896484375 -123.06494140625Q4127.58544921875 -110.23876953125 4156.379150390625 -104.2822265625Q4185.1728515625 -98.32568359375 4218.73828125 -98.32568359375Q4247.41259765625 -98.32568359375 4278.836669921875 -101.467041015625Q4310.2607421875 -104.6083984375 4331.71728515625 -114.662841796875Q4353.173828125 -124.71728515625 4353.173828125 -146.45654296875Q4353.173828125 -168.65234375 4324.826171875 -177.978515625Q4296.478515625 -187.3046875 4248.532958984375 -192.446044921875Q4200.58740234375 -197.58740234375 4141.02197265625 -205.50048828125Q4096.28271484375 -211.95703125 4056.326171875 -222.685302734375Q4016.36962890625 -233.41357421875 3985.326171875 -251.45703125Q3954.28271484375 -269.50048828125 3936.424072265625 -298.08740234375Q3918.5654296875 -326.67431640625 3918.5654296875 -368.3046875Q3918.5654296875 -416.19580078125 3942.141357421875 -448.86962890625Q3965.71728515625 -481.54345703125 4007.65185546875 -501.5869140625Q4049.58642578125 -521.63037109375 4105.662353515625 -530.5869140625Q4161.73828125 -539.54345703125 4226.73828125 -539.54345703125Q4283.6513671875 -539.54345703125 4336.227294921875 -530.858642578125Q4388.80322265625 -522.173828125 4430.23779296875 -503.71728515625Q4471.67236328125 -485.2607421875 4495.9765625 -456.71728515625Q4520.28076171875 -428.173828125 4520.28076171875 -388.9130859375Q4520.28076171875 -385.45654296875 4520.28076171875 -381.4130859375Q4520.28076171875 -377.36962890625 4519.28076171875 -374.45654296875H4330.45654296875V-380.63037109375Q4330.45654296875 -397.7392578125 4314.902099609375 -408.293701171875Q4299.34765625 -418.84814453125 4275.467041015625 -424.032958984375Q4251.58642578125 -429.2177734375 4224.6513671875 -429.2177734375Q4214.28173828125 -429.2177734375 4194.04248046875 -428.489501953125Q4173.80322265625 -427.76123046875 4152.835693359375 -424.076416015625Q4131.8681640625 -420.3916015625 4117.313720703125 -412.250244140625Q4102.75927734375 -404.10888671875 4102.75927734375 -388.826171875Q4102.75927734375 -370.0869140625 4127.487548828125 -361.532470703125Q4152.2158203125 -352.97802734375 4192.444091796875 -348.836669921875Q4232.67236328125 -344.6953125 4279.67236328125 -339.32568359375Q4327.955078125 -333.9560546875 4374.270263671875 -325.227783203125Q4420.58544921875 -316.49951171875 4457.302734375 -298.684326171875Q4494.02001953125 -280.869140625 4515.69384765625 -250.010498046875Q4537.36767578125 -219.15185546875 4537.36767578125 -169.521484375Q4537.36767578125 -117.80419921875 4513.52001953125 -82.673828125Q4489.67236328125 -47.54345703125 4446.73779296875 -26.771728515625Q4403.80322265625 -6.0 4345.4990234375 3.0Q4287.19482421875 12.0 4218.28173828125 12.0ZM4610.02197265625 0.0V-724.54345703125H4794.75927734375V-312.45556640625L5035.2607421875 -527.54345703125H5262.14990234375L5039.9541015625 -316.9130859375L5268.51953125 0.0H5051.2607421875L4900.0859375 -214.89208984375L4794.75927734375 -139.478515625V0.0ZM5313.02197265625 0.0V-527.54345703125H5462.607421875L5475.32470703125 -438.34765625H5483.8681640625Q5499.2158203125 -470.15185546875 5523.4765625 -493.06494140625Q5547.7373046875 -515.97802734375 5578.965576171875 -528.032470703125Q5610.19384765625 -540.0869140625 5645.302734375 -540.0869140625Q5665.4765625 -540.0869140625 5683.52001953125 -537.315185546875Q5701.5634765625 -534.54345703125 5717.7373046875 -528.45654296875V-383.0009765625H5630.259765625Q5595.15087890625 -383.0009765625 5570.096435546875 -371.6748046875Q5545.0419921875 -360.3486328125 5529.12890625 -340.881103515625Q5513.2158203125 -321.41357421875 5505.487548828125 -296.630859375Q5497.75927734375 -271.84814453125 5497.75927734375 -243.93505859375V0.0ZM6051.28173828125 12.0Q5992.19482421875 12.0 5935.662353515625 2.5Q5879.1298828125 -7.0 5833.73876953125 -26.271728515625Q5788.34765625 -45.54345703125 5761.315185546875 -76.5869140625Q5734.28271484375 -107.63037109375 5734.28271484375 -151.2607421875Q5734.28271484375 -155.173828125 5734.510986328125 -158.902099609375Q5734.7392578125 -162.63037109375 5735.7392578125 -166.63037109375H5925.650390625Q5925.10693359375 -164.0 5924.878662109375 -161.271728515625Q5924.650390625 -158.54345703125 5924.650390625 -156.54345703125Q5925.19384765625 -135.89111328125 5942.8896484375 -123.06494140625Q5960.58544921875 -110.23876953125 5989.379150390625 -104.2822265625Q6018.1728515625 -98.32568359375 6051.73828125 -98.32568359375Q6080.41259765625 -98.32568359375 6111.836669921875 -101.467041015625Q6143.2607421875 -104.6083984375 6164.71728515625 -114.662841796875Q6186.173828125 -124.71728515625 6186.173828125 -146.45654296875Q6186.173828125 -168.65234375 6157.826171875 -177.978515625Q6129.478515625 -187.3046875 6081.532958984375 -192.446044921875Q6033.58740234375 -197.58740234375 5974.02197265625 -205.50048828125Q5929.28271484375 -211.95703125 5889.326171875 -222.685302734375Q5849.36962890625 -233.41357421875 5818.326171875 -251.45703125Q5787.28271484375 -269.50048828125 5769.424072265625 -298.08740234375Q5751.5654296875 -326.67431640625 5751.5654296875 -368.3046875Q5751.5654296875 -416.19580078125 5775.141357421875 -448.86962890625Q5798.71728515625 -481.54345703125 5840.65185546875 -501.5869140625Q5882.58642578125 -521.63037109375 5938.662353515625 -530.5869140625Q5994.73828125 -539.54345703125 6059.73828125 -539.54345703125Q6116.6513671875 -539.54345703125 6169.227294921875 -530.858642578125Q6221.80322265625 -522.173828125 6263.23779296875 -503.71728515625Q6304.67236328125 -485.2607421875 6328.9765625 -456.71728515625Q6353.28076171875 -428.173828125 6353.28076171875 -388.9130859375Q6353.28076171875 -385.45654296875 6353.28076171875 -381.4130859375Q6353.28076171875 -377.36962890625 6352.28076171875 -374.45654296875H6163.45654296875V-380.63037109375Q6163.45654296875 -397.7392578125 6147.902099609375 -408.293701171875Q6132.34765625 -418.84814453125 6108.467041015625 -424.032958984375Q6084.58642578125 -429.2177734375 6057.6513671875 -429.2177734375Q6047.28173828125 -429.2177734375 6027.04248046875 -428.489501953125Q6006.80322265625 -427.76123046875 5985.835693359375 -424.076416015625Q5964.8681640625 -420.3916015625 5950.313720703125 -412.250244140625Q5935.75927734375 -404.10888671875 5935.75927734375 -388.826171875Q5935.75927734375 -370.0869140625 5960.487548828125 -361.532470703125Q5985.2158203125 -352.97802734375 6025.444091796875 -348.836669921875Q6065.67236328125 -344.6953125 6112.67236328125 -339.32568359375Q6160.955078125 -333.9560546875 6207.270263671875 -325.227783203125Q6253.58544921875 -316.49951171875 6290.302734375 -298.684326171875Q6327.02001953125 -280.869140625 6348.69384765625 -250.010498046875Q6370.36767578125 -219.15185546875 6370.36767578125 -169.521484375Q6370.36767578125 -117.80419921875 6346.52001953125 -82.673828125Q6322.67236328125 -47.54345703125 6279.73779296875 -26.771728515625Q6236.80322265625 -6.0 6178.4990234375 3.0Q6120.19482421875 12.0 6051.28173828125 12.0Z"/><rect x="6478" y="-140" width="140" height="140" style="fill:var(--px, #2B36F5)"/></symbol>
@@ -408,6 +463,7 @@ html.no-gl .gl-fallback { display: block; }
   </a>
   <span class="hdr-mid mono"><span class="dot" aria-hidden="true"></span>Agenda aberta · Campo Grande <span id="clock">--:--</span><span class="hud" id="hud"></span></span>
   <div class="hdr-right">
+    <div class="lang" role="group" aria-label="Idioma"><button type="button" data-lang="pt" aria-pressed="true">PT</button><span aria-hidden="true">|</span><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
     <button class="kbd" id="kBtn" type="button" aria-haspopup="dialog" aria-controls="pal" aria-label="Abrir atalhos">⌘K</button>
     <a class="pill" href="#contato" data-magnetic data-link>Pedir orçamento</a>
     <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" data-magnetic><span id="menuTxt">Menu</span><span class="ico" aria-hidden="true"><i></i><i></i></span></button>
@@ -422,7 +478,7 @@ html.no-gl .gl-fallback { display: block; }
     <li><a class="m-link" href="#projetos" data-link><small>04</small><span class="t">Projetos</span></a></li>
     <li><a class="m-link" href="#contato" data-link><small>05</small><span class="t">Contato</span></a></li>
   </ol>
-  <div class="menu-foot mono"><span>francoskrs.dev@gmail.com</span><span><a href="https://instagram.com/francoskrs_" target="_blank" rel="noopener">Instagram</a> · <a href="https://github.com/francoxkrs" target="_blank" rel="noopener">GitHub</a> · <a href="https://wa.me/5567992449212" target="_blank" rel="noopener">WhatsApp</a></span></div>
+  <div class="menu-foot mono"><a href="mailto:francoskrs.dev@gmail.com">francoskrs.dev@gmail.com</a><span><a href="https://instagram.com/francoskrs_" target="_blank" rel="noopener">Instagram</a> · <a href="https://github.com/francoxkrs" target="_blank" rel="noopener">GitHub</a> · <a href="https://wa.me/5567992449212" target="_blank" rel="noopener">WhatsApp</a></span></div>
 </nav>
 
 <main id="top">
@@ -449,9 +505,10 @@ html.no-gl .gl-fallback { display: block; }
     <h2 class="sr" id="h-sobre">Sobre</h2>
     <p class="mani" id="mani">Eu sou o Guilherme, a pessoa por trás da Francoskrs. Faço landing pages para <span class="hl">barbearias, estúdios de tatuagem e piercing, manicures, clínicas e restaurantes</span> que querem mais clientes pela internet. Cada site nasce do zero, pensado no celular e rápido de verdade.</p>
     <div class="about-grid">
-      <div class="portrait" data-parallax><div class="portrait-inner"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#fk-mark"/></svg></div><span class="mono">Foto em breve</span></div>
+      <div class="portrait" id="portrait" data-parallax data-cursor="Oi!"><div class="portrait-inner"><img src="img/guilherme.jpg" alt="Guilherme Lima Franco, retrato em meio-tom azul" width="864" height="1080"><img class="p-alt" src="img/guilherme-sorrindo.jpg" alt="" aria-hidden="true" width="864" height="1080" loading="lazy"></div><span class="mono p-cap">Guilherme Lima Franco</span></div>
       <div class="about-copy">
         <p data-fade>Você fala direto comigo do começo ao fim. Eu cuido da estrutura, do texto, do design, do código e das animações, então nada se perde entre uma etapa e outra. Site bonito é o mínimo: o trabalho de verdade é fazer cada seção levar o visitante um passo mais perto de agendar, pedir ou comprar.</p>
+        <figure class="about-pic"><img src="img/guilherme-palestra.jpg" alt="Guilherme apresentando um projeto com microfone e slide" width="720" height="900" loading="lazy"><figcaption class="mono">Apresentando projeto · set/2026</figcaption></figure>
         <dl class="facts">
           <div><dt class="mono">Cidade</dt><dd>Campo Grande, MS</dd></div>
           <div><dt class="mono">Atende</dt><dd>Online, para todo o Brasil</dd></div>
@@ -465,7 +522,52 @@ html.no-gl .gl-fallback { display: block; }
   <section class="sec wrap services" id="servicos" aria-labelledby="h-serv" data-bg="paper">
     <div class="sec-label mono"><span>(02) Serviços</span><span>Investimento sob consulta</span></div>
     <h2 class="h2 display" id="h-serv" data-split style="margin-bottom:clamp(40px,6vw,88px)">O que eu faço</h2>
-    <div class="stack" id="stack"></div>
+    <div class="stack" id="stack">
+    <article class="card c1" style="--i:0">
+      <div class="card-top mono"><span>(01)</span><span>7 a 12 dias úteis</span></div>
+      <h3>Landing page</h3>
+      <div class="card-body">
+        <p>Uma página com um objetivo só: fazer o visitante agir. Agendar, pedir orçamento, chamar no WhatsApp ou comprar.</p>
+        <ul><li>Estrutura e texto pensados para conversão</li><li>Design exclusivo e animações</li><li>Celular primeiro, revisado à mão</li><li>WhatsApp, agenda ou formulário integrados</li></ul>
+        <span class="ideal">Ideal para barbearias, estúdios, clínicas, restaurantes e lançamentos</span>
+        <button type="button" class="card-cta" data-want="lp" data-magnetic="0.2"><span>Orçar este</span><span aria-hidden="true">→</span></button>
+      </div>
+      <span class="card-num" aria-hidden="true">01</span>
+    </article>
+    <article class="card c2" style="--i:1">
+      <div class="card-top mono"><span>(02)</span><span>20 a 35 dias úteis</span></div>
+      <h3>Loja virtual</h3>
+      <div class="card-body">
+        <p>Catálogo, carrinho, frete e pagamento funcionando desde o primeiro pedido, com a mesma cara da sua marca.</p>
+        <ul><li>Páginas de produto que vendem</li><li>Checkout com Pix, cartão e boleto</li><li>Cálculo de frete e e-mails de pedido</li><li>Painel para você cadastrar produtos</li></ul>
+        <span class="ideal">Ideal para quem vende produto todo dia</span>
+        <button type="button" class="card-cta" data-want="ec" data-magnetic="0.2"><span>Orçar este</span><span aria-hidden="true">→</span></button>
+      </div>
+      <span class="card-num" aria-hidden="true">02</span>
+    </article>
+    <article class="card c3" style="--i:2">
+      <div class="card-top mono"><span>(03)</span><span>12 a 20 dias úteis</span></div>
+      <h3>Site institucional</h3>
+      <div class="card-body">
+        <p>Serviços, história, equipe e contato em poucas páginas rápidas, prontas para aparecer no Google.</p>
+        <ul><li>De 3 a 6 páginas</li><li>SEO técnico</li><li>Blog opcional</li><li>Domínio e e-mail profissional configurados</li></ul>
+        <span class="ideal">Ideal para empresas de serviço que precisam passar confiança</span>
+        <button type="button" class="card-cta" data-want="in" data-magnetic="0.2"><span>Orçar este</span><span aria-hidden="true">→</span></button>
+      </div>
+      <span class="card-num" aria-hidden="true">03</span>
+    </article>
+    <article class="card c4" style="--i:3">
+      <div class="card-top mono"><span>(04)</span><span>Ciclos mensais</span></div>
+      <h3>Otimização</h3>
+      <div class="card-body">
+        <p>Eu analiso os dados do seu site, ajusto e testo todo mês para ele vender mais.</p>
+        <ul><li>Relatório mensal de visitas e conversão</li><li>Testes A/B de títulos e ofertas</li><li>Ajustes de velocidade</li><li>Pequenas alterações de conteúdo</li></ul>
+        <span class="ideal">Ideal para quem já tem site e quer mais resultado</span>
+        <button type="button" class="card-cta" data-want="ot" data-magnetic="0.2"><span>Orçar este</span><span aria-hidden="true">→</span></button>
+      </div>
+      <span class="card-num" aria-hidden="true">04</span>
+    </article>
+    </div>
   </section>
 
   <section class="process" id="processo" aria-labelledby="h-proc" data-bg="ink">
@@ -474,15 +576,46 @@ html.no-gl .gl-fallback { display: block; }
         <h2 class="display h2" id="h-proc" data-split>Do briefing ao ar</h2>
         <span class="mono" style="color:var(--tx-mute)">(03) Processo</span>
       </div>
-      <div class="proc-track" id="procTrack"></div>
+      <div class="proc-track" id="procTrack">
+    <article class="step"><span class="step-n">01</span><div><h3>Conversa</h3><p>Uma chamada de 30 minutos por vídeo ou WhatsApp. Entendo seu negócio, seu cliente e o que o site precisa fazer.</p></div><span class="mono when">Dia 1</span></article>
+    <article class="step"><span class="step-n">02</span><div><h3>Estrutura</h3><p>Defino as seções e escrevo o texto na ordem em que o cliente toma a decisão.</p></div><span class="mono when">Dias 2 a 4</span></article>
+    <article class="step"><span class="step-n">03</span><div><h3>Design</h3><p>Layout exclusivo e animações, no celular e no computador. Você aprova antes do código.</p></div><span class="mono when">Dias 5 a 8</span></article>
+    <article class="step"><span class="step-n">04</span><div><h3>Código</h3><p>Site leve e rápido, com WhatsApp, agenda, formulários, Pixel e Analytics integrados.</p></div><span class="mono when">Dias 9 a 12</span></article>
+    <article class="step"><span class="step-n">05</span><div><h3>No ar</h3><p>Publico no seu domínio, testo em vários celulares e te entrego todos os acessos.</p></div><span class="mono when">Dia 13</span></article>
+    <article class="step"><span class="step-n">06</span><div><h3>Depois</h3><p>Suporte para ajustes e uma leitura dos primeiros resultados com você.</p></div><span class="mono when">30 dias</span></article>
+    </div>
       <div class="proc-foot mono"><span>Seis etapas</span><div class="proc-bar"><i id="procBar"></i></div><span class="proc-pct" id="procPct">0%</span></div>
     </div>
   </section>
 
   <section class="sec wrap work" id="projetos" aria-labelledby="h-work" data-bg="ink">
     <div class="sec-label mono"><span>(04) Projetos</span><span>2026</span></div>
-    <h2 class="h2 display" id="h-work" data-split style="margin-bottom:clamp(40px,6vw,88px)">No ar e a caminho</h2>
-    <div class="work-list" id="work"></div>
+    <h2 class="h2 display" id="h-work" data-split style="margin-bottom:clamp(40px,6vw,88px)">Projetos no ar</h2>
+    <div class="work-list" id="work">
+    <a class="w-row" href="https://tali-piercer.netlify.app/" data-i="0" data-cursor="Ver" target="_blank" rel="noopener">
+      <span class="mono w-n">(01)</span><h3>Tali Piercer</h3><span class="w-kind">Landing page · body piercer</span><span class="mono status on">No ar</span><span class="w-arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="w-row" href="#top" data-i="1" data-cursor="Ver" data-link>
+      <span class="mono w-n">(02)</span><h3>Francoskrs</h3><span class="w-kind">Identidade, design, código e animação</span><span class="mono status on">No ar</span><span class="w-arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="w-row" href="#contato" data-i="2" data-cursor="Orçar" data-brief>
+      <span class="mono w-n">(03)</span><h3>Sua marca aqui</h3><span class="w-kind">Landing page</span><span class="mono status open">Espaço livre</span><span class="w-arrow" aria-hidden="true">→</span>
+    </a>
+    </div>
+    <article class="case" id="case-tali" aria-labelledby="h-tali">
+      <div class="case-head"><h3 id="h-tali" data-split>Tali<em>+</em>Piercer</h3><span class="mono" style="color:var(--tx-mute)">(Case 01) Landing page · 2026</span></div>
+      <a class="case-stage" href="https://tali-piercer.netlify.app/" target="_blank" rel="noopener" data-cursor="Abrir site">
+        <div class="case-browser" id="caseBrowser"><div class="pv-bar"><i></i><i></i><i></i><span>tali-piercer.netlify.app</span></div><img src="img/tali-desk.jpg" alt="Página inicial do site da Tali Piercer" width="1440" height="900" loading="lazy"></div>
+        <div class="case-phone" id="casePhone"><img src="img/tali-mobile.jpg" alt="Site da Tali Piercer no celular" width="520" height="1125" loading="lazy"></div>
+      </a>
+      <dl class="case-info mono">
+        <div><dt>Cliente</dt><dd>Tali Piercer, body piercer</dd></div>
+        <div><dt>Cidade</dt><dd>Campo Grande, MS</dd></div>
+        <div><dt>Entrega</dt><dd>Catálogo de 32 furos, galeria, cuidados e agenda no WhatsApp</dd></div>
+        <div><dt>Link</dt><dd><a href="https://tali-piercer.netlify.app/" target="_blank" rel="noopener">Ver site no ar ↗</a></dd></div>
+      </dl>
+      <div class="case-strip"><img src="img/tali-galeria.jpg" alt="Galeria Furos e Afetos do site da Tali" width="1440" height="900" loading="lazy" id="caseStrip"></div>
+    </article>
   </section>
 
   <section class="sec wrap contact" id="contato" aria-labelledby="h-contato" data-bg="ink">
@@ -491,7 +624,7 @@ html.no-gl .gl-fallback { display: block; }
     <div class="contact-row">
       <div class="c-links">
         <div><span class="mono" style="color:var(--tx-mute)">WhatsApp</span><a class="v" href="https://wa.me/5567992449212" target="_blank" rel="noopener" data-cursor="Abrir" id="cWa">+55 67 99244-9212</a><button type="button" class="copy" data-copy="+55 67 99244-9212">Copiar</button></div>
-        <div><span class="mono" style="color:var(--tx-mute)">E-mail</span><span class="v" id="cMail">francoskrs.dev@gmail.com</span><button type="button" class="copy" data-copy="francoskrs.dev@gmail.com">Copiar</button></div>
+        <div><span class="mono" style="color:var(--tx-mute)">E-mail</span><a class="v" id="cMail" href="mailto:francoskrs.dev@gmail.com" data-cursor="Escrever">francoskrs.dev@gmail.com</a><button type="button" class="copy" data-copy="francoskrs.dev@gmail.com">Copiar</button></div>
         <div><span class="mono" style="color:var(--tx-mute)">Instagram</span><a class="v" href="https://instagram.com/francoskrs_" target="_blank" rel="noopener" data-cursor="Abrir">@francoskrs_</a><span></span></div>
         <div><span class="mono" style="color:var(--tx-mute)">GitHub</span><a class="v" href="https://github.com/francoxkrs" target="_blank" rel="noopener" data-cursor="Abrir">francoxkrs</a><span></span></div>
       </div>
@@ -522,7 +655,7 @@ html.no-gl .gl-fallback { display: block; }
         <div class="field"><label for="f-nome">Seu nome</label><input id="f-nome" autocomplete="name" placeholder="Como posso te chamar?"></div>
         <div class="field"><label for="f-neg">Negócio</label><input id="f-neg" autocomplete="organization" placeholder="Nome da sua empresa"></div>
       </div>
-      <div class="field"><span class="flabel" id="lbl-serv">O que você precisa</span><div class="chips" id="chips" role="group" aria-labelledby="lbl-serv"></div></div>
+      <div class="field"><span class="flabel" id="lbl-serv">O que você precisa</span><div class="chips" id="chips" role="group" aria-labelledby="lbl-serv"><label class="chip"><input type="checkbox" id="chip-lp" value="lp"><span>Landing page</span></label><label class="chip"><input type="checkbox" id="chip-ec" value="ec"><span>Loja virtual</span></label><label class="chip"><input type="checkbox" id="chip-in" value="in"><span>Site institucional</span></label><label class="chip"><input type="checkbox" id="chip-ot" value="ot"><span>Otimização</span></label></div></div>
       <div class="fgrid">
         <div class="field"><label for="f-seg">Segmento</label>
           <select id="f-seg"><option>Barbearia</option><option>Manicure e nail design</option><option>Odontologia</option><option>Estúdio de tatuagem</option><option>Body piercing</option><option>Restaurante</option><option>Loja virtual</option><option selected>Outro</option></select></div>
@@ -589,9 +722,9 @@ function fkBoot() {
   ];
   /* Projeto real: copie uma linha, troque os textos e adicione href: 'https://site-do-cliente' e img: 'print-do-site.jpg' */
   const WORK = [
-    { n: '00', name: 'Francoskrs', kind: 'Identidade, design, código e animação', st: 'on', stl: 'No ar', bg: '#2B36F5', fg: '#FFFFFF', px: '#0E1020', label: 'Este site', url: 'francoskrs' },
-    { n: '01', name: 'Sua marca aqui', kind: 'Landing page', st: 'open', stl: 'Espaço livre', bg: '#ECEEF5', fg: '#0E1020', px: '#2B36F5', label: 'Novembro 2026', url: 'seunegocio.com.br', brief: true },
-    { n: '02', name: 'Próximo case', kind: 'Loja virtual ou site', st: 'open', stl: 'Espaço livre', bg: '#14162A', fg: '#ECEEF5', px: '#8D94FF', label: 'Dezembro 2026', url: 'proximo.case', brief: true }
+    { n: '01', name: 'Tali Piercer', kind: 'Landing page · body piercer', st: 'on', stl: 'No ar', bg: '#0C0A0F', fg: '#F7EEFC', px: '#FF2E8B', label: 'Campo Grande · 2026', url: 'tali-piercer.netlify.app', href: 'https://tali-piercer.netlify.app/', img: 'img/tali-desk.jpg' },
+    { n: '02', name: 'Francoskrs', kind: 'Identidade, design, código e animação', st: 'on', stl: 'No ar', bg: '#2B36F5', fg: '#FFFFFF', px: '#0E1020', label: 'Este site', url: 'francoskrs' },
+    { n: '03', name: 'Sua marca aqui', kind: 'Landing page', st: 'open', stl: 'Espaço livre', bg: '#ECEEF5', fg: '#0E1020', px: '#2B36F5', label: 'Novembro 2026', url: 'seunegocio.com.br', brief: true }
   ];
   const NOTES = [
     ['Novo agendamento', 'Barbearia · corte e barba, sábado 10h'],
@@ -604,26 +737,40 @@ function fkBoot() {
   ];
 
   /* ---------- Render ---------- */
-  $('#stack').innerHTML = SERVICES.map((s, i) => `
-    <article class="card ${s.cls}" style="--i:${i}">
-      <div class="card-top mono"><span>(0${i + 1})</span><span>${s.prazo}</span></div>
-      <h3>${s.name}</h3>
-      <div class="card-body">
-        <p>${s.desc}</p>
-        <ul>${s.inc.map(x => `<li>${x}</li>`).join('')}</ul>
-        <span class="ideal">${s.ideal}</span>
-        <button type="button" class="card-cta" data-want="${s.k}" data-magnetic="0.2"><span>Orçar este</span><span aria-hidden="true">→</span></button>
-      </div>
-      <span class="card-num" aria-hidden="true">0${i + 1}</span>
-    </article>`).join('');
-  $('#procTrack').innerHTML = STEPS.map(([t, w, d], i) => `
-    <article class="step"><span class="step-n">0${i + 1}</span><div><h3>${t}</h3><p>${d}</p></div><span class="mono when">${w}</span></article>`).join('');
-  $('#work').innerHTML = WORK.map((w, i) => `
-    <a class="w-row" href="${w.href || (w.brief ? '#contato' : '#top')}" data-i="${i}" data-cursor="${w.brief ? 'Orçar' : 'Ver'}" ${w.href ? 'target="_blank" rel="noopener"' : w.brief ? 'data-brief' : 'data-link'}>
-      <span class="mono w-n">(${w.n})</span><h3>${w.name}</h3><span class="w-kind">${w.kind}</span><span class="mono status ${w.st}">${w.stl}</span><span class="w-arrow" aria-hidden="true">→</span>
-    </a>`).join('');
-  $('#chips').innerHTML = SERVICES.map(s => `<label class="chip"><input type="checkbox" id="chip-${s.k}" value="${s.k}"><span>${s.name}</span></label>`).join('');
+  /* Serviços, processo, projetos e chips já vêm prontos no HTML (gerados a partir destes dados por scripts/prerender.js) */
   const mq = $('#mq'); mq.innerHTML = mq.innerHTML.repeat(4);
+
+  /* ---------- PT | EN ---------- */
+  /* Dicionário PT → EN. O texto em português continua no HTML; a troca percorre a página e devolve um ou outro. */
+  const EN = {"Carregando portfólio": "Loading portfolio", "Francoskrs, voltar ao topo": "Francoskrs, back to top", "Agenda aberta · Campo Grande": "Booking open · Campo Grande", "Abrir atalhos": "Open shortcuts", "Pedir orçamento": "Get a quote", "Fechar": "Close", "Sobre": "About", "Serviços": "Services", "Processo": "Process", "Projetos": "Work", "Contato": "Contact", "Idioma": "Language", "↳ Clique no F 3D": "↳ Click the 3D F", "↳ Toque no F 3D": "↳ Tap the 3D F", "Landing pages · Lojas virtuais · Sites": "Landing pages · Online stores · Websites", "Campo Grande, MS — Brasil": "Campo Grande, MS — Brazil", "Do clique": "From click", "ao cliente": "to client", "Eu crio sites que transformam visita em": "I build websites that turn visits into", "agenda cheia, pedido e venda": "full calendars, orders and sales", ". Design, código e animação feitos do zero, por uma pessoa só.": ". Design, code and motion made from scratch, by one person.", "Role para explorar": "Scroll to explore", "Barbearias": "Barbershops", "Odontologia": "Dental", "Tatuagem": "Tattoo", "Restaurantes": "Restaurants", "Manicure": "Nail salons", "Clínicas": "Clinics", "Lojas virtuais": "Online stores", "(01) Sobre": "(01) About", "Eu sou o Guilherme, a pessoa por trás da Francoskrs. Faço landing pages para": "I'm Guilherme, the person behind Francoskrs. I build landing pages for", "barbearias, estúdios de tatuagem e piercing, manicures, clínicas e restaurantes": "barbershops, tattoo and piercing studios, nail salons, clinics and restaurants", "que querem mais clientes pela internet. Cada site nasce do zero, pensado no celular e rápido de verdade.": "that want more customers online. Every site is built from scratch, mobile-first and genuinely fast.", "Oi!": "Hi!", "Guilherme Lima Franco, retrato em meio-tom azul": "Guilherme Lima Franco, blue halftone portrait", "Você fala direto comigo do começo ao fim. Eu cuido da estrutura, do texto, do design, do código e das animações, então nada se perde entre uma etapa e outra. Site bonito é o mínimo: o trabalho de verdade é fazer cada seção levar o visitante um passo mais perto de agendar, pedir ou comprar.": "You talk to me directly from start to finish. I handle the structure, copy, design, code and motion, so nothing gets lost between steps. A beautiful site is the bare minimum: the real work is making every section move the visitor one step closer to booking, ordering or buying.", "Guilherme apresentando um projeto com microfone e slide": "Guilherme presenting a project with a microphone and slides", "Apresentando projeto · set/2026": "Presenting a project · Sep 2026", "Cidade": "City", "Atende": "Serves", "Online, para todo o Brasil": "Online, all of Brazil", "Especialidade": "Specialty", "Landing pages para negócios locais": "Landing pages for local businesses", "Agenda": "Availability", "Aberta para novembro": "Open for November", "(02) Serviços": "(02) Services", "Investimento sob consulta": "Pricing on request", "O que eu faço": "What I do", "Do briefing ao ar": "From brief to live", "(03) Processo": "(03) Process", "Seis etapas": "Six steps", "(04) Projetos": "(04) Work", "Projetos no ar": "Live projects", "Abrir site": "Open site", "Página inicial do site da Tali Piercer": "Tali Piercer website homepage", "Site da Tali Piercer no celular": "Tali Piercer website on mobile", "Cliente": "Client", "Entrega": "Delivered", "Catálogo de 32 furos, galeria, cuidados e agenda no WhatsApp": "Catalog of 32 piercings, gallery, aftercare and WhatsApp booking", "Ver site no ar ↗": "View live site ↗", "Galeria Furos e Afetos do site da Tali": "Furos & Afetos gallery on Tali's site", "(05) Contato": "(05) Contact", "Resposta em até 24 horas úteis": "Reply within 24 business hours", "Agora é": "Now it's", "sua vez": "your turn", "E-mail": "Email", "Copiar": "Copy", "Abrir": "Open", "Escrever": "Write", "Montar meu": "Start my", "briefing": "brief", "2 minutos": "2 minutes", "Briefing": "Brief", "ou chamar direto no WhatsApp ↗": "or message me on WhatsApp ↗", "Voltar ao topo ↑": "Back to top ↑", "Desenhado e codado por Francoskrs © 2026": "Designed and coded by Francoskrs © 2026", "Monte seu briefing": "Build your brief", "Responda o básico. No final, o botão abre o WhatsApp com a mensagem pronta para você revisar e enviar.": "Answer the basics. At the end, the button opens WhatsApp with the message ready for you to review and send.", "Seu nome": "Your name", "Como posso te chamar?": "What should I call you?", "Negócio": "Business", "Nome da sua empresa": "Your business name", "O que você precisa": "What you need", "Segmento": "Industry", "Barbearia": "Barbershop", "Manicure e nail design": "Nails and nail art", "Estúdio de tatuagem": "Tattoo studio", "Restaurante": "Restaurant", "Loja virtual": "Online store", "Outro": "Other", "Quando precisa no ar": "When do you need it live", "O quanto antes": "As soon as possible", "Em até 30 dias": "Within 30 days", "Em 1 a 3 meses": "In 1 to 3 months", "Sem pressa": "No rush", "Conte um pouco do projeto": "Tell me about the project", "O que você vende, para quem, e o que o site precisa fazer.": "What you sell, to whom, and what the site needs to do.", "Nada é enviado sem você revisar.": "Nothing is sent without your review.", "Gerar mensagem": "Generate message", "Enviar no WhatsApp ↗": "Send on WhatsApp ↗", "Copiar mensagem": "Copy message", "Atalhos": "Shortcuts", "Para onde você quer ir?": "Where do you want to go?", "Buscar atalho": "Search shortcuts", "↑↓ navegar": "↑↓ navigate", "↵ abrir": "↵ open", "esc fechar": "esc close", "Site institucional": "Business website", "Otimização": "Optimization", "Ideal para barbearias, estúdios, clínicas, restaurantes e lançamentos": "Ideal for barbershops, studios, clinics, restaurants and launches", "Uma página com um objetivo só: fazer o visitante agir. Agendar, pedir orçamento, chamar no WhatsApp ou comprar.": "One page with one goal: get the visitor to act. Book, ask for a quote, message on WhatsApp or buy.", "Estrutura e texto pensados para conversão": "Structure and copy built to convert", "Design exclusivo e animações": "Custom design and motion", "Celular primeiro, revisado à mão": "Mobile first, checked by hand", "WhatsApp, agenda ou formulário integrados": "WhatsApp, booking or forms built in", "7 a 12 dias úteis": "7 to 12 business days", "Ideal para quem vende produto todo dia": "Ideal if you sell products every day", "Catálogo, carrinho, frete e pagamento funcionando desde o primeiro pedido, com a mesma cara da sua marca.": "Catalog, cart, shipping and payments working from the first order, with your brand's look.", "Páginas de produto que vendem": "Product pages that sell", "Checkout com Pix, cartão e boleto": "Checkout with Pix, card and boleto", "Cálculo de frete e e-mails de pedido": "Shipping rates and order emails", "Painel para você cadastrar produtos": "Dashboard to add your products", "20 a 35 dias úteis": "20 to 35 business days", "Ideal para empresas de serviço que precisam passar confiança": "Ideal for service businesses that need to earn trust", "Serviços, história, equipe e contato em poucas páginas rápidas, prontas para aparecer no Google.": "Services, story, team and contact in a few fast pages, ready to show up on Google.", "De 3 a 6 páginas": "3 to 6 pages", "SEO técnico": "Technical SEO", "Blog opcional": "Optional blog", "Domínio e e-mail profissional configurados": "Domain and professional email set up", "12 a 20 dias úteis": "12 to 20 business days", "Ideal para quem já tem site e quer mais resultado": "Ideal if you already have a site and want better results", "Eu analiso os dados do seu site, ajusto e testo todo mês para ele vender mais.": "I review your site's data, then tweak and test it every month so it sells more.", "Relatório mensal de visitas e conversão": "Monthly traffic and conversion report", "Testes A/B de títulos e ofertas": "A/B tests on headlines and offers", "Ajustes de velocidade": "Speed improvements", "Pequenas alterações de conteúdo": "Small content updates", "Ciclos mensais": "Monthly cycles", "Orçar este": "Quote this", "Conversa": "Call", "Dia 1": "Day 1", "Uma chamada de 30 minutos por vídeo ou WhatsApp. Entendo seu negócio, seu cliente e o que o site precisa fazer.": "A 30-minute video or WhatsApp call. I learn about your business, your customers and what the site needs to do.", "Estrutura": "Structure", "Dias 2 a 4": "Days 2 to 4", "Defino as seções e escrevo o texto na ordem em que o cliente toma a decisão.": "I plan the sections and write the copy in the order your customer makes the decision.", "Dias 5 a 8": "Days 5 to 8", "Layout exclusivo e animações, no celular e no computador. Você aprova antes do código.": "Custom layout and motion, on mobile and desktop. You approve before any code.", "Código": "Code", "Dias 9 a 12": "Days 9 to 12", "Site leve e rápido, com WhatsApp, agenda, formulários, Pixel e Analytics integrados.": "A light, fast site with WhatsApp, booking, forms, Pixel and Analytics built in.", "No ar": "Live", "Dia 13": "Day 13", "Publico no seu domínio, testo em vários celulares e te entrego todos os acessos.": "I publish on your domain, test on several phones and hand over every login.", "Depois": "After", "30 dias": "30 days", "Suporte para ajustes e uma leitura dos primeiros resultados com você.": "Support for tweaks and a review of the first results together.", "Identidade, design, código e animação": "Identity, design, code and motion", "Sua marca aqui": "Your brand here", "Espaço livre": "Open slot", "Este site": "This site", "Novembro 2026": "November 2026", "Orçar": "Quote", "Ver": "View", "Novo agendamento": "New booking", "Barbearia · corte e barba, sábado 10h": "Barbershop · cut and beard, Saturday 10am", "Pedido recebido": "Order received", "Restaurante · 2 executivos para 12h30": "Restaurant · 2 lunch plates for 12:30", "Consulta marcada": "Appointment set", "Odontologia · avaliação, terça 15h": "Dental · check-up, Tuesday 3pm", "Orçamento pedido": "Quote requested", "Estúdio de tatuagem · fechamento de braço": "Tattoo studio · full sleeve", "Horário reservado": "Slot booked", "Manicure · pé e mão, quinta 17h": "Nail salon · mani-pedi, Thursday 5pm", "Novo cliente": "New client", "Body piercing · helix, sexta 14h": "Body piercing · helix, Friday 2pm", "Venda aprovada": "Sale approved", "Loja virtual · pedido #1048 no Pix": "Online store · order #1048 via Pix", "agora": "now", "Clica": "Click", "Copiado": "Copied", "Copie manualmente": "Copy manually", "Escreva seu nome para eu saber com quem estou falando.": "Write your name so I know who I'm talking to.", "Olá, Guilherme! Vim pelo site da Francoskrs.": "Hi Guilherme! I found you through the Francoskrs website.", "Nome": "Name", "Preciso de": "I need", "quero ajuda para escolher": "help me choose", "Prazo": "Timeline", "Sobre o projeto": "About the project", "Seção": "Section", "Ação": "Action", "Montar briefing": "Start brief", "Abrir WhatsApp": "Open WhatsApp", "Copiar e-mail": "Copy email", "Copiar WhatsApp": "Copy WhatsApp", "Voltar ao topo": "Back to top", "Nada encontrado": "Nothing found", "estrutura": "structure", "texto": "copy", "animações": "motion", "celular": "mobile", "velocidade": "speed", "→ no ar.": "→ live.", "$ francoskrs deploy --cliente=você": "$ francoskrs deploy --client=you"};
+  const REV = {}; for (const k in EN) REV[EN[k]] = k;
+  let lang = 'pt';
+  try { lang = localStorage.getItem('fk-lang') || ''; } catch (e) { lang = ''; }
+  if (lang !== 'pt' && lang !== 'en') lang = /^pt/i.test(navigator.language || 'pt') ? 'pt' : 'en';
+  const T = pt => lang === 'en' && EN[pt] !== undefined ? EN[pt] : pt;
+  const tr = str => {
+    const k = str.trim(); if (!k) return str;
+    const pt = EN[k] !== undefined ? k : REV[k]; if (pt === undefined) return str;
+    return str.replace(k, () => T(pt));
+  };
+  function translateDOM() {
+    const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, { acceptNode: n => n.parentElement && n.parentElement.closest('script, style, svg, pre') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+    let n; while ((n = w.nextNode())) { const v = tr(n.nodeValue); if (v !== n.nodeValue) n.nodeValue = v; }
+    const AT = ['data-cursor', 'placeholder', 'aria-label', 'alt'];
+    $$('[data-cursor], [placeholder], [aria-label], [alt]').forEach(el => AT.forEach(a => { const v = el.getAttribute(a); if (v) { const nv = tr(v); if (nv !== v) el.setAttribute(a, nv); } }));
+    root.lang = lang === 'en' ? 'en' : 'pt-BR';
+    $$('[data-lang]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+  }
+  let splitsUndo = null, splitsRedo = null;
+  function setLang(l) {
+    if (l === lang) return; lang = l;
+    try { localStorage.setItem('fk-lang', l); } catch (e) {}
+    if (splitsUndo) splitsUndo();
+    translateDOM();
+    if (splitsRedo) { splitsRedo(true); ScrollTrigger.refresh(); }
+  }
+  $$('[data-lang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+  translateDOM();
 
   /* ---------- Relógio ---------- */
   const fmt = new Intl.DateTimeFormat('pt-BR', { timeZone: 'America/Campo_Grande', hour: '2-digit', minute: '2-digit', hour12: false });
@@ -633,7 +780,7 @@ function fkBoot() {
   /* ---------- Toast e cópia ---------- */
   let toastT;
   const toast = m => { const t = $('#toast'); t.textContent = m; t.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('on'), 2000); };
-  async function copyText(text) { try { await navigator.clipboard.writeText(text); toast('Copiado'); } catch (e) { toast(`Copie manualmente: ${text}`); } }
+  async function copyText(text) { try { await navigator.clipboard.writeText(text); toast(T('Copiado')); } catch (e) { toast(`${T('Copie manualmente')}: ${text}`); } }
   $$('[data-copy]').forEach(b => b.addEventListener('click', () => copyText(b.dataset.copy)));
 
   /* ---------- Briefing ---------- */
@@ -664,17 +811,17 @@ function fkBoot() {
   $('#form').addEventListener('submit', e => {
     e.preventDefault();
     const nome = $('#f-nome').value.trim();
-    if (!nome) { $('#formHint').textContent = 'Escreva seu nome para eu saber com quem estou falando.'; $('#f-nome').focus(); return; }
-    $('#formHint').textContent = 'Nada é enviado sem você revisar.';
-    const serv = SERVICES.filter(s => picked.has(s.k)).map(s => s.name);
-    const msg = ['Olá, Guilherme! Vim pelo site da Francoskrs.', '', `Nome: ${nome}`,
-      $('#f-neg').value.trim() && `Negócio: ${$('#f-neg').value.trim()}`,
-      `Segmento: ${$('#f-seg').value}`,
-      `Preciso de: ${serv.length ? serv.join(', ') : 'quero ajuda para escolher'}`,
-      `Prazo: ${$('#f-prazo').value}`,
-      $('#f-msg').value.trim() && `\nSobre o projeto:\n${$('#f-msg').value.trim()}`].filter(Boolean).join('\n');
+    if (!nome) { $('#formHint').textContent = T('Escreva seu nome para eu saber com quem estou falando.'); $('#f-nome').focus(); return; }
+    $('#formHint').textContent = T('Nada é enviado sem você revisar.');
+    const serv = SERVICES.filter(s => picked.has(s.k)).map(s => T(s.name));
+    const msg = [T('Olá, Guilherme! Vim pelo site da Francoskrs.'), '', `${T('Nome')}: ${nome}`,
+      $('#f-neg').value.trim() && `${T('Negócio')}: ${$('#f-neg').value.trim()}`,
+      `${T('Segmento')}: ${$('#f-seg').value}`,
+      `${T('Preciso de')}: ${serv.length ? serv.join(', ') : T('quero ajuda para escolher')}`,
+      `${T('Prazo')}: ${$('#f-prazo').value}`,
+      $('#f-msg').value.trim() && `\n${T('Sobre o projeto')}:\n${$('#f-msg').value.trim()}`].filter(Boolean).join('\n');
     const d = new Date();
-    $('#rCode').textContent = `Briefing #FK-${String(d.getFullYear()).slice(2)}${String(d.getMonth() + 1).padStart(2, '0')}-${Math.floor(Math.random() * 900) + 100}`;
+    $('#rCode').textContent = `${T('Briefing')} #FK-${String(d.getFullYear()).slice(2)}${String(d.getMonth() + 1).padStart(2, '0')}-${Math.floor(Math.random() * 900) + 100}`;
     $('#rMsg').textContent = msg;
     $('#rWa').href = `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
     const rc = $('#receipt'); rc.hidden = false;
@@ -690,7 +837,7 @@ function fkBoot() {
     root.classList.toggle('menu-open', menuOpen);
     $('#menuBtn').setAttribute('aria-expanded', String(menuOpen));
     $('#menu').setAttribute('aria-hidden', String(!menuOpen));
-    $('#menuTxt').textContent = menuOpen ? 'Fechar' : 'Menu';
+    $('#menuTxt').textContent = menuOpen ? T('Fechar') : 'Menu';
     const m = $('#menu');
     if (hasGSAP && !reduce) {
       if (menuOpen) {
@@ -728,7 +875,7 @@ function fkBoot() {
   /* HUD ao vivo: FPS e LCP medidos nesta página */
   const hud = $('#hud'); let lcp = 0;
   try { new PerformanceObserver(l => { const e = l.getEntries().pop(); if (e) lcp = e.startTime; }).observe({ type: 'largest-contentful-paint', buffered: true }); } catch (e) {}
-  const hudSet = fps => { hud.textContent = (fps >= 50 ? ` · ${fps} FPS` : '') + (lcp ? ` · LCP ${(lcp / 1000).toFixed(1).replace('.', ',')} s` : ''); };
+  const hudSet = fps => { hud.textContent = (fps >= 50 ? ` · ${fps} FPS` : '') + (lcp && lcp < 2500 ? ` · LCP ${(lcp / 1000).toFixed(1).replace('.', ',')} s` : ''); };
 
   /* ---------- Atalhos (⌘K) ---------- */
   const isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
@@ -753,9 +900,9 @@ function fkBoot() {
   function palMark() { $$('[data-i]', palList).forEach(li => li.setAttribute('aria-selected', String(+li.dataset.i === palSel))); palQ.setAttribute('aria-activedescendant', palItems.length ? 'pal-' + palSel : ''); }
   function palRender() {
     const q = norm(palQ.value.trim());
-    palItems = CMDS.filter(c => !q || norm(c[0] + ' ' + c[1]).includes(q));
+    palItems = CMDS.filter(c => !q || norm(T(c[0]) + ' ' + T(c[1]) + ' ' + c[0]).includes(q));
     palSel = Math.min(palSel, Math.max(0, palItems.length - 1));
-    palList.innerHTML = palItems.length ? palItems.map((c, i) => `<li role="option" id="pal-${i}" data-i="${i}">${c[0]}<span>${c[1]}</span></li>`).join('') : '<li class="empty">Nada encontrado</li>';
+    palList.innerHTML = palItems.length ? palItems.map((c, i) => `<li role="option" id="pal-${i}" data-i="${i}">${T(c[0])}<span>${T(c[1])}</span></li>`).join('') : `<li class="empty">${T('Nada encontrado')}</li>`;
     palMark();
   }
   function palToggle(force) {
@@ -821,19 +968,28 @@ function fkBoot() {
   });
 
   /* ---------- Títulos ---------- */
-  const heroSplit = SplitText.create('#h-hero .ln', { type: 'chars', mask: 'chars' });
-  $$('[data-split]').forEach(el => {
-    const s = SplitText.create(el, { type: 'lines,chars', mask: 'lines' });
-    gsap.from(s.chars, { yPercent: 110, rotate: 4, duration: 1.1, stagger: .018, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 85%' } });
-  });
-  $$('[data-fade]').forEach(el => {
-    const s = SplitText.create(el, { type: 'lines', mask: 'lines' });
-    gsap.from(s.lines, { yPercent: 100, duration: 1, stagger: .08, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 88%' } });
-  });
-
-  /* Manifesto: as palavras acendem com a rolagem */
-  const mani = SplitText.create('#mani', { type: 'words', wordsClass: 'word' });
-  gsap.fromTo(mani.words, { opacity: .14 }, { opacity: 1, stagger: .05, ease: 'none', scrollTrigger: { trigger: '#mani', start: 'top 78%', end: 'bottom 42%', scrub: true } });
+  /* Títulos divididos em letras. Ao trocar de idioma, tudo é desfeito, traduzido e dividido de novo. */
+  let heroSplit;
+  const live = [];
+  const keep = (s, tw) => live.push(() => { if (tw.scrollTrigger) tw.scrollTrigger.kill(); tw.kill(); s.revert(); });
+  splitsRedo = again => {
+    heroSplit = SplitText.create('#h-hero .ln', { type: 'chars', mask: 'chars' });
+    if (again) gsap.from(heroSplit.chars, { yPercent: 115, duration: 1, stagger: .02, ease: 'expo.out' });
+    live.push(() => heroSplit.revert());
+    $$('[data-split]').forEach(el => {
+      const s = SplitText.create(el, { type: 'lines,chars', mask: 'lines' });
+      keep(s, gsap.from(s.chars, { yPercent: 110, rotate: 4, duration: 1.1, stagger: .018, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 85%' } }));
+    });
+    $$('[data-fade]').forEach(el => {
+      const s = SplitText.create(el, { type: 'lines', mask: 'lines' });
+      keep(s, gsap.from(s.lines, { yPercent: 100, duration: 1, stagger: .08, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 88%' } }));
+    });
+    /* Manifesto: as palavras acendem com a rolagem */
+    const mani = SplitText.create('#mani', { type: 'words', wordsClass: 'word' });
+    keep(mani, gsap.fromTo(mani.words, { opacity: .14 }, { opacity: 1, stagger: .05, ease: 'none', scrollTrigger: { trigger: '#mani', start: 'top 78%', end: 'bottom 42%', scrub: true } }));
+  };
+  splitsUndo = () => { while (live.length) live.pop()(); };
+  splitsRedo(false);
 
   /* ---------- Fundo que muda de cor ---------- */
   const BG = { ink: ['#0B0C14', '#ECEEF5', '#8A90A8', 'rgba(236,238,245,.14)'], paper: ['#EEF0F4', '#0E1020', '#585E73', 'rgba(14,16,32,.14)'] };
@@ -902,6 +1058,17 @@ function fkBoot() {
     list.addEventListener('pointerleave', () => gsap.to(pv, { opacity: 0, scale: .6, duration: .5, ease: 'expo.out' }));
   }
 
+  /* Retrato: o sorriso aparece a partir do cursor */
+  const por = $('#portrait');
+  por.addEventListener('pointermove', e => { const r = por.getBoundingClientRect(); por.style.setProperty('--mx', (e.clientX - r.left) / r.width * 100 + '%'); por.style.setProperty('--my', (e.clientY - r.top) / r.height * 100 + '%'); });
+  if (!fine) por.addEventListener('click', () => por.classList.toggle('on'));
+
+  /* Case em destaque */
+  gsap.from('#caseBrowser', { yPercent: 18, rotateX: 12, transformPerspective: 1400, transformOrigin: '50% 100%', ease: 'none', scrollTrigger: { trigger: '.case-stage', start: 'top bottom', end: 'center center', scrub: true } });
+  gsap.fromTo('#casePhone', { yPercent: 40 }, { yPercent: -10, ease: 'none', scrollTrigger: { trigger: '.case-stage', start: 'top bottom', end: 'bottom top', scrub: true } });
+  gsap.from('.case-info > div', { y: 30, opacity: 0, stagger: .08, duration: .9, ease: 'expo.out', scrollTrigger: { trigger: '.case-info', start: 'top 88%' } });
+  gsap.from('#caseStrip', { clipPath: 'inset(0 0 100% 0 round 14px)', duration: 1.4, ease: 'expo.inOut', scrollTrigger: { trigger: '#caseStrip', start: 'top 85%' } });
+
   /* ---------- Rodapé ---------- */
   gsap.from('#footWord', { yPercent: 60, opacity: 0, ease: 'none', scrollTrigger: { trigger: '.foot', start: 'top bottom', end: 'bottom bottom', scrub: true } });
   gsap.from('.orb', { scale: 0, rotate: -90, duration: 1.4, ease: 'elastic.out(1, .6)', scrollTrigger: { trigger: '.orb', start: 'top 90%' } });
@@ -915,29 +1082,38 @@ function fkBoot() {
   gsap.set('.hero-meta, .hero-foot', { opacity: 0, y: 20 });
   const n = { v: 0 };
   const step = t => '  ' + (t + ' ').padEnd(19, '.') + ' ';
-  const LOG = [[0, '<b>$ francoskrs deploy --cliente=você</b>'], [10, step('estrutura') + '<em>ok</em>'], [26, step('texto') + '<em>ok</em>'], [42, step('design') + '<em>ok</em>'],
-    [58, step('animações') + '<em>60 fps</em>'], [74, step('celular') + '<em>ok</em>'], [88, step('velocidade') + '<em>100</em>'], [100, '<b>→ no ar.</b> <em>●</em>']];
+  const LOG = [[0, `<b>${T('$ francoskrs deploy --cliente=você')}</b>`], [10, step(T('estrutura')) + '<em>ok</em>'], [26, step(T('texto')) + '<em>ok</em>'], [42, step('design') + '<em>ok</em>'],
+    [58, step(T('animações')) + '<em>60 fps</em>'], [74, step(T('celular')) + '<em>ok</em>'], [88, step(T('velocidade')) + '<em>100</em>'], [100, `<b>${T('→ no ar.')}</b> <em>●</em>`]];
   let logK = -1;
   const logUpd = v => { let k = 0; while (k < LOG.length && LOG[k][0] <= v) k++; if (k !== logK) { logK = k; $('#ldLog').innerHTML = LOG.slice(0, k).map(l => l[1]).join('\n'); } };
+  /* Primeira visita: abertura curta (≈1,9 s). Quem volta entra direto no hero. */
+  let seen = false; try { seen = !!localStorage.getItem('fk-seen'); localStorage.setItem('fk-seen', '1'); } catch (e) {}
   const intro = gsap.timeline();
-  intro.to(n, { v: 100, duration: 1.6, ease: 'power2.inOut', onUpdate: () => { $('#ldN').textContent = Math.round(n.v); logUpd(n.v); } }, 0)
-    .to('#ldBar', { scaleX: 1, duration: 1.6, ease: 'power2.inOut' }, 0)
-    .from('#ldPx', { x: 6, y: 4, scale: .2, transformOrigin: 'center', duration: 1.1, ease: 'back.out(2)' }, .2)
-    .from('#ldF', { opacity: 0, duration: .6 }, 0)
-    .to('#loader', { clipPath: 'inset(0 0 100% 0)', duration: 1.1, ease: 'expo.inOut' }, 1.75)
-    .to(heroSplit.chars, { yPercent: 0, duration: 1.3, stagger: .028, ease: 'expo.out' }, 2.25)
-    .to('.hero-meta, .hero-foot', { opacity: 1, y: 0, duration: 1, stagger: .1, ease: 'expo.out' }, 2.6)
-    .add(() => { $('#loader') && $('#loader').remove(); }, 2.9);
-  if (gl) intro.add(gl.enter, 1.9);
+  if (seen) {
+    $('#loader') && $('#loader').remove();
+    intro.to(heroSplit.chars, { yPercent: 0, duration: 1.1, stagger: .022, ease: 'expo.out' }, .05)
+      .to('.hero-meta, .hero-foot', { opacity: 1, y: 0, duration: .9, stagger: .1, ease: 'expo.out' }, .35);
+    if (gl) intro.add(gl.enter, 0);
+  } else {
+    intro.to(n, { v: 100, duration: 1, ease: 'power2.inOut', onUpdate: () => { $('#ldN').textContent = Math.round(n.v); logUpd(n.v); } }, 0)
+      .to('#ldBar', { scaleX: 1, duration: 1, ease: 'power2.inOut' }, 0)
+      .from('#ldPx', { x: 6, y: 4, scale: .2, transformOrigin: 'center', duration: .8, ease: 'back.out(2)' }, .1)
+      .from('#ldF', { opacity: 0, duration: .4 }, 0)
+      .to('#loader', { clipPath: 'inset(0 0 100% 0)', duration: .85, ease: 'expo.inOut' }, 1.05)
+      .to(heroSplit.chars, { yPercent: 0, duration: 1.2, stagger: .024, ease: 'expo.out' }, 1.4)
+      .to('.hero-meta, .hero-foot', { opacity: 1, y: 0, duration: 1, stagger: .1, ease: 'expo.out' }, 1.7)
+      .add(() => { $('#loader') && $('#loader').remove(); }, 1.9);
+    if (gl) intro.add(gl.enter, 1.15);
+  }
 
   /* ---------- Do clique ao cliente: o F em 3D é clicável ---------- */
   const notifs = $('#notifs'), ntHint = $('#ntHint');
-  if (!fine) ntHint.textContent = '↳ Toque no F 3D';
+  if (!fine) ntHint.textContent = T('↳ Toque no F 3D');
   let noteI = 0, clicked = false;
   function notify() {
     const [t, d] = NOTES[noteI++ % NOTES.length];
     const el = document.createElement('div'); el.className = 'nt';
-    el.innerHTML = `<span class="nt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#fk-mark"/></svg></span><div><div class="nt-top"><b>${t}</b><span>agora</span></div><p>${d}</p></div>`;
+    el.innerHTML = `<span class="nt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#fk-mark"/></svg></span><div><div class="nt-top"><b>${T(t)}</b><span>${T('agora')}</span></div><p>${T(d)}</p></div>`;
     notifs.prepend(el);
     gsap.fromTo(el, { y: -24, scale: .92, opacity: 0 }, { y: 0, scale: 1, opacity: 1, duration: .8, ease: 'back.out(1.6)' });
     $$('.nt', notifs).slice(3).forEach(o => gsap.to(o, { opacity: 0, y: 12, duration: .4, overwrite: true, onComplete: () => o.remove() }));
@@ -947,7 +1123,7 @@ function fkBoot() {
     const hero = $('#hero'); let glHover = false;
     const overGL = e => !e.target.closest('a, button') && gl.hitTest(e.clientX, e.clientY);
     if (fine) {
-      hero.addEventListener('pointermove', e => { const h = overGL(e); if (h !== glHover) { glHover = h; setCursorLabel(h ? 'Clica' : null); } });
+      hero.addEventListener('pointermove', e => { const h = overGL(e); if (h !== glHover) { glHover = h; setCursorLabel(h ? T('Clica') : null); } });
       hero.addEventListener('pointerleave', () => { if (glHover) { glHover = false; setCursorLabel(null); } });
     }
     hero.addEventListener('click', e => {
@@ -1087,4 +1263,5 @@ function fkBoot() {
 })();
 </script>
 
-</body></html>
+</body>
+</html>
